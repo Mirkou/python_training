@@ -10,6 +10,8 @@ def is_alert_present(wd):
     except:
         return False
 
+
+
 class tre(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver()
@@ -19,11 +21,11 @@ class tre(unittest.TestCase):
         success = True
         wd = self.wd
         wd.get("https://family.disney.com/")
-        wd.find_element_by_link_text("CRAFTS").click()
+        wd.find_element_by_link_text("Crafts").click()
         self.assertTrue(success)
     
-    def tearDown(self):
-        self.wd.quit()
+#    def tearDown(self):
+#        self.wd.quit()
 
 if __name__ == '__main__':
     unittest.main()
