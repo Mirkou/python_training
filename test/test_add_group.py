@@ -12,15 +12,15 @@ def app(request):
 
 
 def test_add_group(app):
-        app.login("admin", "secret")
+        app.session.login("admin", "secret")
         app.sozd_groups(Group(name="fcgdfgdfg", header="sdfsfsdfs", footer="dfgdfgdfgdfg"))
         app.vozv_group()
-        app.logout()
+        app.session.logout()
 
 
 def test_add__empty_group(app):
-        app.login("admin", "secret")
+        app.session.login("admin", "secret")
         app.sozd_groups(Group(name="", header="", footer=""))
         app.vozv_group()
-        app.logout()
+        app.session.logout()
 
